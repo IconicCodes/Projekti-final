@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Browse Cars | LEDRI MOTORS</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">
+        LEDRI<span> MOTORS.</span>
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="browse.html" class="active">Browse Cars</a>
+        <a href="favorites.html">Favorites</a>
+        <a href="sell.html">Sell Your Car</a>
+    </nav>
+
+    <a href="sell.html" class="nav-button">Sell Your Car ↗</a>
+</header>
+
+<main class="browse-page">
+
+    <section class="browse-header">
+        <span class="eyebrow">EXPLORE OUR COLLECTION</span>
+        <h1>Find Your Perfect Car.</h1>
+        <p>Explore our selection of premium vehicles.</p>
+    </section>
+
+    <section class="browse-layout">
+
+        <!-- FILTER SIDEBAR -->
+
+        <aside class="filter-sidebar">
+
+            <div class="filter-heading">
+                <h2>Filters</h2>
+                <button id="clearFilters">Reset</button>
+            </div>
+
+            <div class="filter-group">
+                <label for="search">Search</label>
+                <input type="text" id="search"
+                    placeholder="Brand or model...">
+            </div>
+
+            <div class="filter-group">
+                <label for="brand">Brand</label>
+                <select id="brand">
+                    <option value="">All Brands</option>
+                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Volkswagen">Volkswagen</option>
+                    <option value="Porsche">Porsche</option>
+                    <option value="Toyota">Toyota</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Price Range (€)</label>
+
+                <div class="price-inputs">
+                    <input type="number" id="minPrice"
+                        placeholder="Min">
+                    <input type="number" id="maxPrice"
+                        placeholder="Max">
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label for="fuel">Fuel Type</label>
+                <select id="fuel">
+                    <option value="">All Fuel Types</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="Petrol">Petrol</option>
+                    <option value="Hybrid">Hybrid</option>
+                    <option value="Electric">Electric</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="transmission">Transmission</label>
+                <select id="transmission">
+                    <option value="">All Transmissions</option>
+                    <option value="Automatic">Automatic</option>
+                    <option value="Manual">Manual</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="year">Minimum Year</label>
+                <input type="number" id="year"
+                    placeholder="e.g. 2018">
+            </div>
+
+            <div class="filter-group">
+                <label for="maxMileage">Maximum Mileage</label>
+                <input type="number" id="maxMileage"
+                    placeholder="e.g. 100000">
+            </div>
+
+        </aside>
+
+        <!-- VEHICLE RESULTS -->
+
+        <section class="results-section">
+
+            <div class="results-heading">
+                <div>
+                    <h2>Available Vehicles</h2>
+                    <p id="resultCount">Loading vehicles...</p>
+                </div>
+
+                <select id="sort">
+                    <option value="newest">Newest First</option>
+                    <option value="priceLow">Lowest Price</option>
+                    <option value="priceHigh">Highest Price</option>
+                    <option value="mileage">Lowest Mileage</option>
+                    <option value="year">Oldest First</option>
+                </select>
+            </div>
+
+            <div class="car-grid" id="browseCars"></div>
+
+            <div id="emptyState" class="empty-state" hidden>
+                <h2>No vehicles found</h2>
+                <p>Try changing your search or filters.</p>
+                <button id="emptyReset">Clear Filters</button>
+            </div>
+
+        </section>
+
+    </section>
+
+</main>
+
+<footer>
+    <a href="index.html" class="logo">
+        LEDRI<span> MOTORS.</span>
+    </a>
+
+    <p>Find Your Next Drive.</p>
+    <p>© 2026 LEDRI MOTORS. All rights reserved.</p>
+</footer>
+
+<script src="js/animations.js"></script>
+<script src="js/data.js"></script>
+<script src="js/browse.js"></script>
+
+</body>
+</html>
